@@ -1,81 +1,77 @@
-import { Link } from "wouter";
 import { PageContainer } from "@/components/layout/PageContainer";
-import { AlertBox } from "@/components/ui/AlertBox";
-import { Gamepad2, Search, Code, Shield, Zap, BookOpen } from "lucide-react";
+  import { AlertBox } from "@/components/ui/AlertBox";
 
-export default function Home() {
-  const topics = [
-    { icon: Gamepad2, title: "O que é Game Guardian?", desc: "Entenda o que é essa ferramenta de modificação de memória Android e como ela funciona.", href: "/o-que-e" },
-    { icon: Search, title: "Busca de Valores", desc: "Aprenda a encontrar e modificar valores na memória RAM de qualquer jogo Android.", href: "/busca-basica" },
-    { icon: Code, title: "Scripts Lua", desc: "Automatize suas modificações com scripts poderosos escritos em Lua.", href: "/scripts-lua" },
-    { icon: Shield, title: "Uso Seguro", desc: "Técnicas de proteção anti-ban e como usar o GG com segurança.", href: "/uso-seguro" },
-    { icon: Zap, title: "Hacks Populares", desc: "Exemplos práticos de modificações em jogos populares como Free Fire e PUBG.", href: "/hacks-populares" },
-    { icon: BookOpen, title: "Scripts Avançados", desc: "Lua avançado: loops, ponteiros, dump de memória e muito mais.", href: "/scripts-avancados" },
-  ];
+  export default function Home() {
+    return (
+      <PageContainer
+        title="Game Guardian — Guia Completo"
+        subtitle="O guia mais completo sobre Game Guardian em Português Brasileiro — do básico ao avançado."
+        difficulty="iniciante"
+        timeToRead="3 min"
+      >
+        <AlertBox type="info" title="Bem-vindo ao Guia Game Guardian">
+          Este guia cobre tudo sobre o Game Guardian: instalação, tipos de busca, edição de memória, scripts Lua, bypass de anti-cheat e muito mais. Tudo em português, com exemplos práticos.
+        </AlertBox>
 
-  return (
-    <PageContainer
-      title="Game Guardian"
-      subtitle="Guia Completo de Modificação de Memória Android em Português Brasileiro — do básico ao avançado."
-    >
-      <AlertBox type="warning" title="Aviso importante">
-        Este guia é para fins educacionais. O uso de Game Guardian em jogos online pode violar os termos de serviço e resultar em banimentos. Use com responsabilidade.
-      </AlertBox>
-
-      <h2>O que você vai aprender</h2>
-      <p>
-        O Game Guardian é uma das ferramentas de modificação de memória mais poderosas para Android. Com ele, você pode alterar valores de jogos em tempo real — vida, moeda, velocidade, dano — e automatizar tudo isso via scripts Lua.
-      </p>
-      <p>
-        Este guia cobre desde a instalação básica até scripting avançado, bypass de anti-cheat e uso seguro, tudo explicado em detalhes com exemplos práticos.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 not-prose">
-        {topics.map((item, i) => {
-          const Icon = item.icon;
-          return (
-            <Link key={i} href={item.href}>
-              <div className="group bg-card border border-border rounded-xl p-5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 cursor-pointer h-full">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground text-base mb-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
+        <h2>O que você vai encontrar aqui</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+          {[
+            { icone: "🔍", titulo: "Busca de Memória", desc: "Aprenda todos os tipos de busca — valor exato, intervalo, XOR para valores encriptados, busca por desconhecido e hexadecimal.", nivel: "Básico → Avançado" },
+            { icone: "✏️", titulo: "Edição e Freeze", desc: "Como modificar valores, congelar endereços, trabalhar com ponteiros e navegar por estruturas de dados complexas.", nivel: "Intermediário" },
+            { icone: "📜", titulo: "Scripts Lua", desc: "Automatize suas modificações com scripts Lua — desde scripts simples de uma ação até sistemas completos com UI.", nivel: "Avançado" },
+            { icone: "🛡️", titulo: "Bypass Anti-Cheat", desc: "Como contornar sistemas de detecção com Magisk, DenyList, PlayIntegrityFix e modo furtivo.", nivel: "Avançado" },
+            { icone: "📱", titulo: "Sem Root", desc: "Use o GG via Virtual Space sem precisar de root — com comparação completa de apps compatíveis.", nivel: "Básico" },
+            { icone: "🎮", titulo: "Hacks Práticos", desc: "Exemplos passo a passo dos hacks mais comuns: moedas, vida, velocidade, teleporte e timers.", nivel: "Intermediário" },
+          ].map((item) => (
+            <div key={item.titulo} className="bg-card border border-border rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-2xl">{item.icone}</span>
+                <h4 className="font-bold text-foreground text-sm">{item.titulo}</h4>
               </div>
-            </Link>
-          );
-        })}
-      </div>
+              <p className="text-xs text-muted-foreground mb-2">{item.desc}</p>
+              <span className="text-xs text-primary font-medium">{item.nivel}</span>
+            </div>
+          ))}
+        </div>
 
-      <h2>Por que usar Game Guardian?</h2>
-      <p>
-        O GG é utilizado por milhões de usuários ao redor do mundo para:
-      </p>
-      <ul>
-        <li><strong>Testes e desenvolvimento</strong> — desenvolvedores usam para testar seus jogos</li>
-        <li><strong>Jogos offline</strong> — modificar experiência em jogos single-player</li>
-        <li><strong>Aprendizado de programação</strong> — os scripts Lua são uma excelente introdução</li>
-        <li><strong>Análise de memória</strong> — entender como jogos armazenam dados</li>
-      </ul>
+        <h2>Trilha de aprendizado recomendada</h2>
+        <div className="grid grid-cols-1 gap-2 my-6 not-prose">
+          {[
+            { fase: "Fase 1 — Fundamentos", topicos: ["O que é Game Guardian?", "Instalação e configuração", "Interface do GG", "Permissões e Root"], cor: "border-l-green-500" },
+            { fase: "Fase 2 — Busca", topicos: ["Grupos de Valores (tipos de dados)", "Busca Básica de Valores", "Tipos de Busca (incluindo XOR)", "Hacks Populares"], cor: "border-l-blue-500" },
+            { fase: "Fase 3 — Edição Avançada", topicos: ["Edição de Memória", "Virtual Space", "Bypass Anti-Cheat", "Troubleshooting"], cor: "border-l-yellow-500" },
+            { fase: "Fase 4 — Automação", topicos: ["Scripts Lua básicos", "Scripts Lua avançados", "Virtual Space + Scripts"], cor: "border-l-purple-500" },
+          ].map((item) => (
+            <div key={item.fase} className={"bg-card border border-border rounded-xl p-4 border-l-4 " + item.cor}>
+              <h4 className="font-bold text-foreground mb-2 text-sm">{item.fase}</h4>
+              <div className="flex flex-wrap gap-2">
+                {item.topicos.map((t, i) => (
+                  <span key={i} className="text-xs bg-muted px-2 py-1 rounded text-muted-foreground">{t}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
 
-      <h2>Pré-requisitos</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 not-prose">
-        {[
-          { label: "Android Root", desc: "Magisk ou KernelSU para acesso root completo" },
-          { label: "Virtual Space", desc: "VirtualXposed ou VMOS para usar sem root" },
-          { label: "Game Guardian APK", desc: "Baixado do site oficial gameguardian.net" },
-        ].map((item, i) => (
-          <div key={i} className="bg-muted/50 border border-border rounded-xl p-4 text-center">
-            <span className="text-2xl font-bold text-primary block mb-1">{i + 1}</span>
-            <span className="font-semibold text-foreground text-sm block mb-1">{item.label}</span>
-            <p className="text-xs text-muted-foreground">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </PageContainer>
-  );
-}
+        <h2>Por que aprender Game Guardian?</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+          {[
+            { titulo: "Aprenda na prática", desc: "Modificar memória de jogos é uma forma divertida e prática de aprender conceitos de programação, memória RAM, tipos de dados e estruturas de dados." },
+            { titulo: "Economize tempo de grind", desc: "Use o GG para pular horas de grind repetitivo em jogos single-player e aproveitar o conteúdo que realmente importa." },
+            { titulo: "Desenvolva habilidades técnicas", desc: "Os conceitos aprendidos aqui — ptrace, memória de processo, tipos de dados, ponteiros — são diretamente aplicáveis em desenvolvimento e segurança." },
+            { titulo: "Comunidade ativa", desc: "O fórum do GG tem centenas de scripts e guias específicos para jogos. Uma vez entendidos os fundamentos, você pode contribuir e customizar." },
+          ].map((item) => (
+            <div key={item.titulo} className="bg-card border border-border rounded-xl p-4">
+              <h4 className="font-bold text-foreground mb-1 text-sm">{item.titulo}</h4>
+              <p className="text-xs text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <AlertBox type="success" title="Pronto para começar?">
+          Se você é completamente novo, comece por <strong>O que é Game Guardian?</strong> no menu lateral. Se já tem experiência básica, vá direto para <strong>Tipos de Busca</strong> para aprender técnicas como busca XOR.
+        </AlertBox>
+      </PageContainer>
+    );
+  }
+  
