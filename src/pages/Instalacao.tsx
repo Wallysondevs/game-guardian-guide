@@ -1,98 +1,114 @@
 import { PageContainer } from "@/components/layout/PageContainer";
-import { AlertBox } from "@/components/ui/AlertBox";
-import { CodeBlock } from "@/components/ui/CodeBlock";
+  import { AlertBox } from "@/components/ui/AlertBox";
+  import { CodeBlock } from "@/components/ui/CodeBlock";
 
-export default function Instalacao() {
-  return (
-    <PageContainer
-      title="Download e Instalação"
-      subtitle="Como baixar e instalar o Game Guardian corretamente no seu Android."
-      difficulty="iniciante"
-      timeToRead="6 min"
-    >
-      <AlertBox type="warning" title="Baixe apenas do site oficial">
-        Sempre baixe o Game Guardian do site oficial: <strong>gameguardian.net</strong>. APKs de sites alternativos podem conter malware.
-      </AlertBox>
+  export default function Instalacao() {
+    return (
+      <PageContainer
+        title="Instalação"
+        subtitle="Como instalar e configurar o Game Guardian corretamente em dispositivos com e sem root."
+        difficulty="iniciante"
+        timeToRead="12 min"
+      >
+        <AlertBox type="warning" title="GG não está no Google Play">
+          O Game Guardian só pode ser baixado do site oficial: <strong>gameguardian.net</strong>. Qualquer versão em outras lojas pode ser malware. Sempre verifique o hash MD5/SHA do arquivo baixado.
+        </AlertBox>
 
-      <h2>Método 1: Com Root (Recomendado)</h2>
-      <p>
-        O método mais poderoso e estável é usar o GG com um dispositivo Android com root (Magisk ou KernelSU).
-      </p>
+        <h2>Requisitos do sistema</h2>
+        <div className="not-prose overflow-x-auto my-6">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                <th className="bg-muted text-foreground font-semibold px-4 py-2 text-left border border-border">Requisito</th>
+                <th className="bg-muted text-foreground font-semibold px-4 py-2 text-left border border-border">Mínimo</th>
+                <th className="bg-muted text-foreground font-semibold px-4 py-2 text-left border border-border">Recomendado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Android", "4.0 (Ice Cream Sandwich)", "8.0+ (Oreo ou superior)"],
+                ["Root", "Root via Magisk, KernelSU ou APatch", "Magisk 26+ com DenyList habilitado"],
+                ["RAM", "2 GB", "4 GB+ para buscas em região A"],
+                ["Arquitetura", "ARM32 ou ARM64", "ARM64 (64-bit) para melhor suporte"],
+                ["Sem root", "Virtual Space app (limitado)", "VirtualXposed ou Parallel Space"],
+              ].map(([req, min, rec], i) => (
+                <tr key={i} className={i % 2 === 1 ? "bg-muted/20" : ""}>
+                  <td className="px-4 py-2 border border-border font-medium text-foreground text-sm">{req}</td>
+                  <td className="px-4 py-2 border border-border text-muted-foreground text-sm">{min}</td>
+                  <td className="px-4 py-2 border border-border text-primary text-sm">{rec}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <h3>Passo a passo</h3>
-      <div className="grid grid-cols-1 gap-3 my-6 not-prose">
-        {[
-          { n: "1", t: "Ative fontes desconhecidas", d: "Vá em Configurações → Segurança → Fontes Desconhecidas e habilite a instalação de APKs externos." },
-          { n: "2", t: "Baixe o APK", d: "Acesse gameguardian.net e baixe a versão mais recente do Game Guardian." },
-          { n: "3", t: "Instale o APK", d: "Abra o arquivo baixado e clique em Instalar. Confirme qualquer aviso de segurança." },
-          { n: "4", t: "Conceda acesso root", d: "Ao abrir o GG pela primeira vez, o Magisk solicitará permissão root. Clique em 'Conceder'." },
-          { n: "5", t: "Selecione o processo", d: "Abra o jogo que deseja hackear, volte ao GG e selecione o processo na lista." },
-        ].map((item) => (
-          <div key={item.n} className="flex gap-4 bg-card border border-border rounded-xl p-4">
-            <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center shrink-0">{item.n}</span>
-            <div>
-              <h4 className="font-semibold text-foreground mb-1">{item.t}</h4>
-              <p className="text-sm text-muted-foreground">{item.d}</p>
+        <h2>Instalação com Root (método completo)</h2>
+        <div className="grid grid-cols-1 gap-3 my-6 not-prose">
+          {[
+            { n: "1", title: "Verifique o root", desc: "Abra um emulador de terminal (ex: Termux) e rode o comando 'su'. Se o prompt mudar para '#', o root está funcionando.", detail: "Se não tiver root, vá para a seção de instalação sem root ou root via Magisk." },
+            { n: "2", title: "Baixe o APK oficial", desc: "Acesse gameguardian.net → Downloads → baixe a versão mais recente. O arquivo tem extensão .apk.", detail: "Anote o MD5 mostrado no site e compare com o arquivo baixado para verificar integridade." },
+            { n: "3", title: "Habilite fontes desconhecidas", desc: "Configurações → Segurança → Fontes desconhecidas → Ativar. Em Android 8+: Configurações → Aplicativos → Permissões especiais → Instalar aplicativos desconhecidos.", detail: "Você pode desativar após a instalação." },
+            { n: "4", title: "Instale o APK", desc: "Abra o gerenciador de arquivos, navegue até o APK baixado e toque para instalar. Confirme as permissões.", detail: "O GG pode pedir permissões de overlay (exibir sobre outros apps) durante a instalação." },
+            { n: "5", title: "Conceda permissão root", desc: "Na primeira abertura, o GG vai solicitar acesso root. Conceda. No Magisk, vá em Superusuário para confirmar que GG está listado.", detail: "Se nenhum diálogo aparecer, abra o Magisk manualmente e conceda root ao GG." },
+            { n: "6", title: "Configure o DenyList (recomendado)", desc: "No Magisk: Configurações → Habilitar DenyList. Depois: DenyList → adicione o jogo que quer hackear.", detail: "Isso faz o root ficar invisível para o jogo, reduzindo detecção de anti-cheat." },
+          ].map((item) => (
+            <div key={item.n} className="bg-card border border-border rounded-xl p-5">
+              <div className="flex gap-3 items-start">
+                <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center shrink-0">{item.n}</span>
+                <div>
+                  <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-sm text-foreground/80 mb-1">{item.desc}</p>
+                  <p className="text-xs text-muted-foreground italic">{item.detail}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <h2>Método 2: Sem Root (Virtual Space)</h2>
-      <p>
-        Se você não tem root, pode usar um <strong>Virtual Space</strong> — um ambiente Android virtualizado dentro do seu dispositivo. O GG roda dentro desse ambiente com permissões elevadas, sem precisar de root real.
-      </p>
-
-      <h3>Apps de Virtual Space compatíveis</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
-        {[
-          { name: "VirtualXposed", desc: "Baseado em VirtualApp. Suporte a módulos Xposed sem root.", rating: "⭐⭐⭐⭐" },
-          { name: "VMOS Pro", desc: "Sistema Android completo virtualizado. Muito estável.", rating: "⭐⭐⭐⭐⭐" },
-          { name: "Parallel Space", desc: "Popular para clonar apps, suporte básico ao GG.", rating: "⭐⭐⭐" },
-          { name: "F1 VM", desc: "Virtual machine Android, suporte a root interno.", rating: "⭐⭐⭐⭐" },
-        ].map((app) => (
-          <div key={app.name} className="bg-card border border-border rounded-xl p-4">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="font-bold text-foreground">{app.name}</h3>
-              <span className="text-sm">{app.rating}</span>
+        <h2>Instalando root com Magisk</h2>
+        <AlertBox type="info" title="Magisk é o método de root mais popular em 2024">
+          Magisk oferece root sistêmico com módulos, DenyList para ocultar root de apps específicos e compatibilidade com a maioria dos dispositivos Android modernos.
+        </AlertBox>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+          {[
+            { titulo: "Método via Recovery", desc: "Requer TWRP ou recovery personalizado. Instala o Magisk como módulo de sistema. Método mais completo mas mais complexo." },
+            { titulo: "Método via Fastboot (boot.img)", desc: "Baixe a factory image do seu dispositivo, extraia o boot.img, patch via Magisk app e flash via fastboot. Método oficial e mais seguro." },
+            { titulo: "Magisk via ADB", desc: "Para dispositivos com modo de desenvolvedor ativo. Requer PC com ADB instalado.", },
+            { titulo: "Alternativas: KernelSU, APatch", desc: "Para dispositivos não compatíveis com Magisk. KernelSU opera no nível de kernel — mais difícil de detectar." },
+          ].map((item) => (
+            <div key={item.titulo} className="bg-card border border-border rounded-xl p-4">
+              <h4 className="font-bold text-foreground mb-2 text-sm">{item.titulo}</h4>
+              <p className="text-xs text-muted-foreground">{item.desc}</p>
             </div>
-            <p className="text-sm text-muted-foreground">{app.desc}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <h3>Configurando com VMOS Pro</h3>
-      <div className="not-prose space-y-3 my-4">
-        {[
-          "Baixe e instale o VMOS Pro na Play Store ou site oficial",
-          "Abra o VMOS e configure o sistema virtual (Android 7 ou 9 recomendado)",
-          "Dentro do VMOS, ative Root nas configurações do sistema virtual",
-          "Instale o APK do Game Guardian dentro do VMOS (use o gerenciador de arquivos interno)",
-          "Instale o APK do jogo que deseja hackear também dentro do VMOS",
-          "Abra o jogo dentro do VMOS, depois abra o GG e selecione o processo",
-        ].map((step, i) => (
-          <div key={i} className="flex gap-3 items-start">
-            <span className="w-6 h-6 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
-            <p className="text-sm text-foreground/80">{step}</p>
-          </div>
-        ))}
-      </div>
+        <h2>Primeira execução e configuração</h2>
+        <CodeBlock
+          language="text"
+          title="Configurações recomendadas após instalar"
+          code={"1. Modo de execução:\n   GG → Configurações → Método de execução\n   → Selecione 'Root' se tiver root\n   → Selecione 'VirtualSpace' se não tiver root\n\n2. Modo furtivo:\n   GG → Configurações → Modo Furtivo → Habilitar\n   (Reduz visibilidade para anti-cheats)\n\n3. Ícone flutuante:\n   GG → Configurações → Ícone flutuante\n   → 'GG' = ícone padrão\n   → 'Ocultar' = sem ícone (acesse por notificação)\n\n4. Região padrão:\n   GG → Configurações → Região de busca padrão\n   → Defina 'Ca' para buscas mais rápidas\n\n5. Tipo de dado padrão:\n   → Defina 'Dword' para começar (mude conforme necessário)"}
+        />
 
-      <h2>Verificando a instalação</h2>
-      <p>Para confirmar que o GG está funcionando corretamente:</p>
-      <CodeBlock
-        language="text"
-        title="Checklist de instalação"
-        code={`✅ GG abre sem erros
-✅ Permissão root concedida (Magisk mostra na lista de apps)
-✅ Ao abrir o GG, aparece o ícone flutuante sobre outros apps
-✅ Ao selecionar um processo, a lista de processos em execução aparece
-✅ É possível realizar uma busca simples (ex: buscar valor 100)`}
-      />
+        <AlertBox type="success" title="Testando se o GG está funcionando">
+          Abra qualquer jogo simples (como um quebra-cabeça) com um número visível na tela. Busque por esse número como Dword no GG. Se encontrar resultados, o GG está funcionando corretamente.
+        </AlertBox>
 
-      <AlertBox type="danger" title="Problema comum: GG não aparece na lista de processos">
-        Se o jogo não aparecer na lista de processos, tente: 1) Abrir o jogo primeiro, depois o GG. 2) Reiniciar o GG como root. 3) Verificar se o Magisk está atualizado. 4) Tentar o método Virtual Space como alternativa.
-      </AlertBox>
-    </PageContainer>
-  );
-}
+        <h2>Problemas na instalação</h2>
+        <div className="grid grid-cols-1 gap-3 my-4 not-prose">
+          {[
+            { erro: "App não instalado (Error -24)", solucao: "Versão anterior corrompida. Vá em Configurações → Apps → desinstale o GG completamente, reinicie e instale de novo." },
+            { erro: "Análise bloqueada pelo Play Protect", solucao: "No Google Play → Menu → Play Protect → Configurações → desative 'Verificar ameaças'. Reative após instalação." },
+            { erro: "GG abre mas não lista processos", solucao: "Root não concedido. Abra Magisk → verifique se GG está em Superusuário. Se não estiver, abra o GG novamente e conceda." },
+            { erro: "Erro ao conceder root no GG", solucao: "Tente executar o GG como root via terminal: 'su -c am start gameguardian'. Ou reinstale o Magisk." },
+          ].map((item) => (
+            <div key={item.erro} className="bg-card border border-border rounded-xl p-4 border-l-4 border-l-destructive">
+              <h4 className="font-bold text-destructive mb-1 text-sm">{item.erro}</h4>
+              <p className="text-xs text-muted-foreground">{item.solucao}</p>
+            </div>
+          ))}
+        </div>
+      </PageContainer>
+    );
+  }
+  
