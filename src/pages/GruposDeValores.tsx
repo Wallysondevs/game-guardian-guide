@@ -10,7 +10,28 @@ export default function GruposDeValores() {
       difficulty="iniciante"
       timeToRead="22 min"
     >
-      <AlertBox type="info" title="Por que isso importa?">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Group search"}</strong> {' — '} {"busca conjuntos de valores próximos em memória."}
+          </li>
+        <li>
+            <strong>{"Estruturas"}</strong> {' — '} {"jogos guardam stats em structs contíguas."}
+          </li>
+        <li>
+            <strong>{"Sintaxe"}</strong> {' — '} {"100;200;300:50 — busca 100,200,300 dentro de 50 bytes."}
+          </li>
+        <li>
+            <strong>{"Vantagem"}</strong> {' — '} {"precisão maior que busca simples."}
+          </li>
+        <li>
+            <strong>{"Casos"}</strong> {' — '} {"muito útil para inventory slots, stats de personagem."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Por que isso importa?">
         Usar o tipo errado é a causa número 1 de buscas sem resultado. Um Float buscado como Dword nunca vai ser encontrado mesmo que o endereço exista — porque os bytes que representam 100.0 (Float) são completamente diferentes dos bytes que representam 100 (inteiro). Entender cada tipo elimina 90% dos problemas de busca e abre acesso a valores que pareciam impossíveis de encontrar.
       </AlertBox>
 

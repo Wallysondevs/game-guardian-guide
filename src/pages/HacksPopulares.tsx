@@ -10,7 +10,28 @@ export default function HacksPopulares() {
       difficulty="intermediario"
       timeToRead="28 min"
     >
-      <AlertBox type="warning" title="Use apenas em jogos offline ou conta de testes">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"God mode"}</strong> {' — '} {"HP nunca diminui — congele o valor."}
+          </li>
+        <li>
+            <strong>{"Money/gold"}</strong> {' — '} {"edita o valor da moeda em memória."}
+          </li>
+        <li>
+            <strong>{"Speed hack"}</strong> {' — '} {"altera a taxa de tick do jogo."}
+          </li>
+        <li>
+            <strong>{"Damage multiplier"}</strong> {' — '} {"modifica fórmula de dano."}
+          </li>
+        <li>
+            <strong>{"One-hit kill"}</strong> {' — '} {"HP do inimigo vai a zero ao acertar."}
+          </li>
+        </ul>
+        <AlertBox type="warning" title="Use apenas em jogos offline ou conta de testes">
         Os exemplos nesta seção funcionam em jogos que armazenam valores client-side. Jogos online com validação de servidor não serão afetados ou resultarão em ban permanente da conta. Para mais detalhes sobre detecção, consulte as seções <strong>Bypass Anti-Cheat</strong> e <strong>Uso Seguro</strong>.
       </AlertBox>
 

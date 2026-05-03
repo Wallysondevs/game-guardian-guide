@@ -10,7 +10,28 @@ export default function BuscaBasica() {
       difficulty="iniciante"
       timeToRead="18 min"
     >
-      <AlertBox type="info" title="O que você vai aprender">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Refinamento progressivo"}</strong> {' — '} {"filtra resultados a cada mudança de valor no jogo."}
+          </li>
+        <li>
+            <strong>{"Valor exato"}</strong> {' — '} {"sabe o número (HP=100); busca rápida."}
+          </li>
+        <li>
+            <strong>{"Valor desconhecido"}</strong> {' — '} {"não sabe — usa \"increased/decreased\" para refinar."}
+          </li>
+        <li>
+            <strong>{"Range"}</strong> {' — '} {"busca valor entre X e Y."}
+          </li>
+        <li>
+            <strong>{"Paciência"}</strong> {' — '} {"refinamento bom > buscas múltiplas mal feitas."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="O que você vai aprender">
         O método de busca por refinamento progressivo — como partir de milhares de resultados e chegar no endereço exato que controla o valor que você quer modificar. Esta é a habilidade mais fundamental do Game Guardian. Domine isso e 80% dos hacks ficam acessíveis.
       </AlertBox>
 

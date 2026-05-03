@@ -10,7 +10,28 @@ export default function BypassAntiCheat() {
       difficulty="avancado"
       timeToRead="28 min"
     >
-      <AlertBox type="danger" title="Aviso ético e legal">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Anti-cheat"}</strong> {' — '} {"sistema que detecta modificação de memória."}
+          </li>
+        <li>
+            <strong>{"Virtual Space"}</strong> {' — '} {"executa o jogo dentro de outro processo isolado."}
+          </li>
+        <li>
+            <strong>{"SELinux"}</strong> {' — '} {"política do Android que pode bloquear injeção."}
+          </li>
+        <li>
+            <strong>{"Detection"}</strong> {' — '} {"jogo varre código modificado e ban no servidor."}
+          </li>
+        <li>
+            <strong>{"Ética"}</strong> {' — '} {"use só em offline/single-player."}
+          </li>
+        </ul>
+        <AlertBox type="danger" title="Aviso ético e legal">
         Bypass de anti-cheat em jogos multiplayer online prejudica outros jogadores reais e viola os termos de serviço — quase sempre resulta em ban permanente da conta e às vezes do dispositivo. Use exclusivamente em jogos offline, single-player, ou em contas de teste descartáveis. Esta seção tem fins educacionais sobre como sistemas de segurança funcionam — entender é diferente de praticar.
       </AlertBox>
 

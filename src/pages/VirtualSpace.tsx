@@ -10,7 +10,28 @@ export default function VirtualSpace() {
       difficulty="iniciante"
       timeToRead="20 min"
     >
-      <AlertBox type="info" title="O que é Virtual Space?">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Virtual Space"}</strong> {' — '} {"app que executa outros apps em ambiente isolado."}
+          </li>
+        <li>
+            <strong>{"Sem root"}</strong> {' — '} {"permite usar GG sem rootear o device."}
+          </li>
+        <li>
+            <strong>{"Limitações"}</strong> {' — '} {"alguns jogos detectam VS e recusam abrir."}
+          </li>
+        <li>
+            <strong>{"Apps populares"}</strong> {' — '} {"VirtualXposed, Parallel Space, GO Multiple."}
+          </li>
+        <li>
+            <strong>{"Performance"}</strong> {' — '} {"overhead de VS pode reduzir FPS."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="O que é Virtual Space?">
         Um Virtual Space (espaço virtual) é um aplicativo que cria um ambiente Android isolado, onde outros apps rodam como se tivessem permissões elevadas. O GG pode funcionar dentro desse espaço para monitorar e modificar a memória de jogos rodando no mesmo ambiente — sem root real do dispositivo. Isso democratiza o uso do GG: não é mais preciso desbloquear bootloader, fazer root, arriscar warranty ou bricar o aparelho.
       </AlertBox>
 

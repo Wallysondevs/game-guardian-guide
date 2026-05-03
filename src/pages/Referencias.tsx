@@ -9,7 +9,28 @@ export default function Referencias() {
       difficulty="iniciante"
       timeToRead="14 min"
     >
-      <AlertBox type="info" title="Recursos organizados por categoria">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"gameguardian.net"}</strong> {' — '} {"site oficial e fórum."}
+          </li>
+        <li>
+            <strong>{"YouTube"}</strong> {' — '} {"tutoriais visuais para jogos específicos."}
+          </li>
+        <li>
+            <strong>{"XDA Developers"}</strong> {' — '} {"threads sobre root e modding Android."}
+          </li>
+        <li>
+            <strong>{"Lua docs"}</strong> {' — '} {"para scripts avançados no GG."}
+          </li>
+        <li>
+            <strong>{"Discord/Telegram"}</strong> {' — '} {"grupos de comunidade ativa."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Recursos organizados por categoria">
         Aqui você encontra os melhores recursos da comunidade GG e do ecossistema de segurança mobile — fóruns, ferramentas complementares, documentação oficial, livros, canais de YouTube e CTFs para evoluir do GG para uma carreira em cibersegurança ou pesquisa de segurança em jogos.
       </AlertBox>
 

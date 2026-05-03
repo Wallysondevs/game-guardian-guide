@@ -10,7 +10,28 @@ export default function UsoSeguro() {
       difficulty="iniciante"
       timeToRead="18 min"
     >
-      <AlertBox type="warning" title="Risco zero não existe">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Conta secundária"}</strong> {' — '} {"nunca use cheat na conta principal."}
+          </li>
+        <li>
+            <strong>{"Backup do save"}</strong> {' — '} {"antes de editar, copie o save."}
+          </li>
+        <li>
+            <strong>{"Single-player"}</strong> {' — '} {"foco em offline minimiza risco."}
+          </li>
+        <li>
+            <strong>{"Não compartilhe"}</strong> {' — '} {"prints com cheat ativo viram evidência."}
+          </li>
+        <li>
+            <strong>{"Ética"}</strong> {' — '} {"respeite outros jogadores."}
+          </li>
+        </ul>
+        <AlertBox type="warning" title="Risco zero não existe">
         Qualquer modificação em jogos online tem risco — não importa quão sofisticado seja o seu setup. A diferença está entre risco controlado (conta de testes, jogo offline, valores discretos) e risco alto (conta principal em jogo competitivo). Use estas práticas para reduzir, mas nunca elimine, o risco.
       </AlertBox>
 

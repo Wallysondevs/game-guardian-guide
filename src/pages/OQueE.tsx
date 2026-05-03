@@ -10,7 +10,28 @@ export default function OQueE() {
       difficulty="iniciante"
       timeToRead="14 min"
     >
-      <AlertBox type="info" title="Definição resumida">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Game Guardian"}</strong> {' — '} {"editor de memória para jogos Android."}
+          </li>
+        <li>
+            <strong>{"Cheat tool"}</strong> {' — '} {"similar ao Cheat Engine para PC."}
+          </li>
+        <li>
+            <strong>{"Open source"}</strong> {' — '} {"gratuito, sem ads, com plugins Lua."}
+          </li>
+        <li>
+            <strong>{"Comunidade"}</strong> {' — '} {"fórum com scripts prontos para milhares de jogos."}
+          </li>
+        <li>
+            <strong>{"Educational"}</strong> {' — '} {"ótimo para aprender memory editing e RE."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Definição resumida">
         Game Guardian (GG) é um aplicativo Android que permite ler e modificar a memória RAM de jogos em tempo real, alterando valores como vida, dinheiro, velocidade, munição e qualquer outro número que o jogo armazene localmente. Funciona via root, ou através de espaços virtuais sem root, e suporta automação completa via scripts Lua.
       </AlertBox>
 

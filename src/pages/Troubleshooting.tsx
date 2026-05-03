@@ -10,7 +10,28 @@ export default function Troubleshooting() {
       difficulty="iniciante"
       timeToRead="20 min"
     >
-      <AlertBox type="info" title="Como usar este guia">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Não acha valor"}</strong> {' — '} {"tipo errado; tente float ou double."}
+          </li>
+        <li>
+            <strong>{"Jogo crashou"}</strong> {' — '} {"bypass anti-cheat antes."}
+          </li>
+        <li>
+            <strong>{"Valor muda sozinho"}</strong> {' — '} {"jogo recalcula; congele ou edite fórmula."}
+          </li>
+        <li>
+            <strong>{"GG não abre"}</strong> {' — '} {"Magisk DenyList configurado errado."}
+          </li>
+        <li>
+            <strong>{"Banido"}</strong> {' — '} {"use conta secundária; aceite o risco."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Como usar este guia">
         Os problemas estão organizados por categoria. Se sua questão não está aqui, considere postar em fóruns como gameguardian.net/forum, comunidades do Telegram em português, ou Discord. Boas descrições de problema (modelo do aparelho, versão Android, jogo, exato comportamento) recebem ajuda mais rápida.
       </AlertBox>
 

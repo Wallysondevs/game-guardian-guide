@@ -10,7 +10,25 @@ export default function Instalacao() {
       difficulty="iniciante"
       timeToRead="20 min"
     >
-      <AlertBox type="warning" title="GG não está no Google Play">
+      <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Root requerido"}</strong> {' — '} {"GG precisa de root para acessar memória de outros processos."}
+          </li>
+        <li>
+            <strong>{"Magisk"}</strong> {' — '} {"método sistemless mais comum hoje."}
+          </li>
+        <li>
+            <strong>{"VirtualSpace alternativa"}</strong> {' — '} {"sem root, GG roda jogos dentro do VS."}
+          </li>
+        <li>
+            <strong>{"Floating widget"}</strong> {' — '} {"overlay sobre o jogo; precisa permissão \"draw over\"."}
+          </li>
+        <li>
+            <strong>{"Shizuku"}</strong> {' — '} {"alternativa sem root para algumas operações."}
+          </li>
+        </ul>
+        <AlertBox type="warning" title="GG não está no Google Play">
         O Game Guardian só pode ser baixado do site oficial: <strong>gameguardian.net</strong>. Qualquer versão em outras lojas pode ser malware com a mesma cara. Sempre verifique o hash MD5/SHA-256 do arquivo baixado contra o publicado no site. Em 2023, dezenas de APKs falsos com trojans bancários foram distribuídos como "Game Guardian" em sites de download brasileiros.
       </AlertBox>
 

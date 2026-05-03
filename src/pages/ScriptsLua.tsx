@@ -10,7 +10,28 @@ export default function ScriptsLua() {
       difficulty="intermediario"
       timeToRead="25 min"
     >
-      <AlertBox type="info" title="Por que Lua?">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Lua"}</strong> {' — '} {"linguagem leve e embutida no GG."}
+          </li>
+        <li>
+            <strong>{".lua extension"}</strong> {' — '} {"arquivos de script."}
+          </li>
+        <li>
+            <strong>{"gg.alert"}</strong> {' — '} {"mostra mensagem na tela."}
+          </li>
+        <li>
+            <strong>{"gg.toast"}</strong> {' — '} {"notificação curta."}
+          </li>
+        <li>
+            <strong>{"Loops/timer"}</strong> {' — '} {"automatize ações repetitivas."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Por que Lua?">
         Lua é uma linguagem leve, rápida e fácil de aprender — criada na PUC-Rio, no Brasil. O GG usa Lua 5.3 com funções extras para manipular memória, exibir menus e interagir com o jogo. Em 1-2 horas de prática você pode escrever scripts profissionais que automatizam todo o trabalho manual de busca e modificação. Imagine clicar 1 botão e ter vida infinita, moedas máximas e velocidade dobrada — em vez de 5 minutos de buscas manuais por sessão.
       </AlertBox>
 

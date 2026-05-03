@@ -9,7 +9,28 @@ export default function Etica() {
       difficulty="iniciante"
       timeToRead="15 min"
     >
-      <AlertBox type="warning" title="Ferramenta poderosa, responsabilidade maior">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Single-player"}</strong> {' — '} {"editar seu próprio save é ok."}
+          </li>
+        <li>
+            <strong>{"Multiplayer"}</strong> {' — '} {"prejudica outros jogadores; ban é certo."}
+          </li>
+        <li>
+            <strong>{"ToS"}</strong> {' — '} {"usar cheat geralmente viola Terms of Service."}
+          </li>
+        <li>
+            <strong>{"Bans"}</strong> {' — '} {"contas, hardware ID e IP podem ser banidos."}
+          </li>
+        <li>
+            <strong>{"Aprenda"}</strong> {' — '} {"use cheats como aprendizado de RE, não atalho."}
+          </li>
+        </ul>
+        <AlertBox type="warning" title="Ferramenta poderosa, responsabilidade maior">
         O Game Guardian é uma ferramenta técnica legítima de análise de memória — equiparável ao Cheat Engine no PC, GDB para debugging, ou Frida para instrumentação dinâmica. Como qualquer ferramenta poderosa, seu impacto depende inteiramente de quem a usa e para quê. Esta seção convida você a refletir sobre as escolhas éticas envolvidas no uso de ferramentas de modificação de jogos.
       </AlertBox>
 

@@ -10,7 +10,28 @@ export default function EdicaoDeMemoria() {
       difficulty="intermediario"
       timeToRead="26 min"
     >
-      <AlertBox type="info" title="O que você vai aprender">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"RAM editing"}</strong> {' — '} {"modifica valores em memória do processo."}
+          </li>
+        <li>
+            <strong>{"Endereço"}</strong> {' — '} {"posição em memória onde o valor mora."}
+          </li>
+        <li>
+            <strong>{"Tipo"}</strong> {' — '} {"int32, float, double, byte — escolha errada = lixo."}
+          </li>
+        <li>
+            <strong>{"Salvamento"}</strong> {' — '} {"muitos jogos salvam estado em arquivo — edite ambos."}
+          </li>
+        <li>
+            <strong>{"Frozen"}</strong> {' — '} {"GG mantém valor congelado mesmo se o jogo escrever por cima."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="O que você vai aprender">
         Como modificar valores, congelá-los (freeze), trabalhar com ponteiros, usar offsets, manipular structs de objetos de jogos e realizar edições programáticas em lote — do simples ao avançado. Esta é a aplicação prática de tudo que você aprendeu nas seções anteriores.
       </AlertBox>
 

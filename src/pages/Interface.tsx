@@ -10,7 +10,28 @@ export default function Interface() {
       difficulty="iniciante"
       timeToRead="16 min"
     >
-      <AlertBox type="info" title="Versão de referência">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Floating icon"}</strong> {' — '} {"botão flutuante para abrir/fechar GG."}
+          </li>
+        <li>
+            <strong>{"Address list"}</strong> {' — '} {"lista de endereços encontrados/congelados."}
+          </li>
+        <li>
+            <strong>{"Search bar"}</strong> {' — '} {"onde você digita o valor a buscar."}
+          </li>
+        <li>
+            <strong>{"Filters"}</strong> {' — '} {"tipo de dado, range, refinamento."}
+          </li>
+        <li>
+            <strong>{"Settings"}</strong> {' — '} {"tema, idioma, performance, hotkeys."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Versão de referência">
         Este guia usa o GG versão 101+ como referência. Versões anteriores podem ter interface levemente diferente, mas as funcionalidades principais são as mesmas. Os screenshots mentais aqui descritos são os elementos comuns desde a versão 90 até a atual.
       </AlertBox>
 

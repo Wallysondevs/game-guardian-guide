@@ -10,7 +10,28 @@ export default function Permissoes() {
       difficulty="intermediario"
       timeToRead="22 min"
     >
-      <AlertBox type="warning" title="Root é necessário para funcionalidade completa">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Root"}</strong> {' — '} {"acesso total ao sistema; necessário sem VS."}
+          </li>
+        <li>
+            <strong>{"Draw over apps"}</strong> {' — '} {"para overlay flutuante sobre o jogo."}
+          </li>
+        <li>
+            <strong>{"Storage"}</strong> {' — '} {"salvar tabelas e scripts."}
+          </li>
+        <li>
+            <strong>{"Magisk DenyList"}</strong> {' — '} {"esconde root do jogo."}
+          </li>
+        <li>
+            <strong>{"SELinux permissive"}</strong> {' — '} {"se setenforce 0 ajuda em alguns devices."}
+          </li>
+        </ul>
+        <AlertBox type="warning" title="Root é necessário para funcionalidade completa">
         O Android isola processos por segurança. Sem root, o GG não pode acessar a memória de outros apps. O Virtual Space contorna isso parcialmente criando um sandbox onde o jogo e o GG vivem como subprocessos do mesmo app de VS — mas root real oferece acesso completo, mais velocidade e compatibilidade com mais jogos.
       </AlertBox>
 

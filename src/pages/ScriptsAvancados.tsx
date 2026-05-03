@@ -10,7 +10,28 @@ export default function ScriptsAvancados() {
       difficulty="avancado"
       timeToRead="32 min"
     >
-      <AlertBox type="info" title="Pré-requisito">
+      <AlertBox type="info" title="Pré-requisitos">
+          Ler "O que é" e "Instalação"; device com root ou Virtual Space.
+        </AlertBox>
+        <h2>Glossário rápido</h2>
+        <ul>
+          <li>
+            <strong>{"Lua API"}</strong> {' — '} {"linguagem de script integrada ao GG."}
+          </li>
+        <li>
+            <strong>{"gg.searchNumber"}</strong> {' — '} {"busca programática."}
+          </li>
+        <li>
+            <strong>{"gg.getResults"}</strong> {' — '} {"recupera resultados em tabela Lua."}
+          </li>
+        <li>
+            <strong>{"gg.editAll"}</strong> {' — '} {"edita lote de endereços."}
+          </li>
+        <li>
+            <strong>{"Menu"}</strong> {' — '} {"gg.choice() cria menu interativo."}
+          </li>
+        </ul>
+        <AlertBox type="info" title="Pré-requisito">
         Esta seção assume que você já leu <strong>Scripts Lua — Introdução</strong> e está confortável com sintaxe básica, busca, modificação e menus. Aqui mergulhamos em técnicas que diferenciam scripts amadores de scripts profissionais — os mesmos padrões que você vê em scripts populares na comunidade GG.
       </AlertBox>
 
