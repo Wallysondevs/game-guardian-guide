@@ -232,3 +232,40 @@
 .prose tr:nth-child(even) td {
   @apply bg-muted/30;
 }
+
+/* Custom scrollbar — cyberpunk purple */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a855f7 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #7c3aed);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c084fc, #a855f7);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: #c084fc;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
